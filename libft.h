@@ -1,7 +1,7 @@
 # ifndef libft_h
 # define libft_h
 # include <unistd.h>
-
+# include <stdlib.h>
 
 int ft_isalpha(int c);
 int ft_isalnum(int c);
@@ -12,6 +12,8 @@ int ft_strlen(char *str);
 void *ft_memset(void *p, int c, size_t len);
 void ft_bzero(void *s, size_t n);
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+char *strdup(const char *s);
 
 
 
