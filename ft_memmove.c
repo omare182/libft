@@ -6,7 +6,7 @@
 /*   By: omel-kas <omel-kas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:47:39 by omel-kas          #+#    #+#             */
-/*   Updated: 2026/10/13 19:35:47 by omel-kas         ###   ########.fr       */
+/*   Updated: 2026/10/13 22:18:00 by omel-kas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     }
     return (d);
 }
-#include <stdio.h>
-int main(void)
-{
-    char s[] = "HELLO";
-    char *dst = s + 1;
-    char *src = s;
-    ft_memmove(dst , src, 5);
-    printf("%s\n%s\n", dst, src);
-    return (0);
+// #include <stdio.h>
+// int main(void)
+// {
+//     char s[] = "HELLO";
+//     char *dst = s + 1;
+//     char *src = s;
+//     ft_memmove(dst , src, 5);
+//     printf("%s\n%s\n", dst, src);
+//     return (0);
 
 
-}
+// }

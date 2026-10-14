@@ -1,4 +1,4 @@
-#include "libft.h"
+ #include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -22,4 +22,14 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
     
     dst[i] = '\0';
     return (len_src);
+}   
+
+#include <stdio.h> 
+int main(){
+    char s1[] = "hello";
+    char s2[] = "kasmi";
+    size_t i = ft_strlcpy(s1, s2, 6);
+    printf("i = %zu\n", i);
+
+
 }
