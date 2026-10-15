@@ -8,7 +8,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     i = 0;
     if(needle[i] == '\0')
         return ((char *)&haystack[i]);
-    while(haystack[i] && i < len)
+    while(i < len && haystack[i])
     {
         j = 0;
         while(i + j < len && haystack[i + j] == needle[j])
@@ -19,7 +19,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
-
 
 
 #include <stdio.h>
@@ -48,7 +47,7 @@ int main(void)
     printf("15. ft: %s | std: %s\n", ft_strnstr("lorem ipsum dolor sit amet", "sit", 20), strnstr("lorem ipsum dolor sit amet", "sit", 20));
     printf("16. ft: %s | std: %s\n", ft_strnstr("lorem ipsum dolor sit amet", "consectetur", 30), strnstr("lorem ipsum dolor sit amet", "consectetur", 30));
     printf("17. ft: %s | std: %s\n", ft_strnstr("lorem ipsum dolor sit amet", "sit", 0), strnstr("lorem ipsum dolor sit amet", "sit", 0));
-    printf("18. ft: %s | std: %s\n", ft_strnstr("aaabc", "abc", 5), strnstr("aaabc", "abc", 5));
+    printf("18. ft: %s | std: %s\n", ft_strnstr(NULL, "wor", 0), strnstr(NULL, "wor", 0));
     printf("19. ft: %s | std: %s\n", ft_strnstr("a\0bc", "bc", 4), strnstr("a\0bc", "bc", 4));
     printf("20. ft: %s | std: %s\n", ft_strnstr(empty, "", 1), strnstr(empty, "", 1));
 
