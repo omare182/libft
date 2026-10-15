@@ -6,7 +6,7 @@
 /*   By: omel-kas <omel-kas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 21:42:38 by omel-kas          #+#    #+#             */
-/*   Updated: 2026/10/15 23:29:36 by omel-kas         ###   ########.fr       */
+/*   Updated: 2026/10/15 23:31:55 by omel-kas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while(s[len_s])
 		len_s++;
-	if(len_s == 0 || start > len_s){
+	if(len_s == 0 || start >= len_s){
 		new = malloc(1);
 		if(!new)
 			return (NULL);
