@@ -20,17 +20,21 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	size_t len_s;
 
 	len_s = 0;
-	i = 0;
+	i = 0; 
+	if(s  == NULL)
+		return (NULL); 
 	while(s[len_s])
 		len_s++;
-	if(len_s == 0 || start >= len_s){
+	if(start >= len_s || len_s == 0 || len == 0){
 		new = malloc(1);
 		if(!new)
 			return (NULL);
 		*new =  '\0';
 		return (new);
 	}
-	new = malloc((sizeof(char)*len) + 1);
+	if(len > len_s - start)
+		len = len_s - start;
+	new = malloc((sizeof(char)*(len + 1)));
 	if(!new)
 		return (NULL);	
 	while(i < len )
