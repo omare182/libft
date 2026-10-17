@@ -115,7 +115,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 // 	t(31, NULL, 0, 0, NULL);
 // }
 //////////////////onther test
-#include <stdio.h>
+/* #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
@@ -153,35 +153,5 @@ static void	t(int n, char const *name, char const *s,
 }
 
 int main(void)
-{
+{/*
 	/* Error 1: s == NULL */
-	t(1, "NULL string",              NULL, 0, 5, NULL);
-	t(2, "NULL string, len 0",       NULL, 0, 0, NULL);
-
-	/* Error 2: start == strlen */
-	t(3, "start == strlen",          "hello", 5, 3, "");
-	t(4, "start == strlen, len 0",   "hello", 5, 0, "");
-	t(5, "start == strlen (1 char)", "a", 1, 1, "");
-
-	/* Error 3: len bigger than the remaining chars */
-	t(6, "len > remaining",          "hello", 3, 100, "lo");
-	t(7, "len > remaining (+1)",     "hello", 4, 2, "o");
-	t(8, "len way too big",          "hello world", 6, 42000, "world");
-	t(9, "len = strlen from start 1", "hello", 1, 5, "ello");
-
-	/* Error 4: len = SIZE_MAX (malloc overflow) */
-	t(10, "len = SIZE_MAX",          "hello", 0, SIZE_MAX, "hello");
-	t(11, "len = SIZE_MAX, start 2", "hello", 2, SIZE_MAX, "llo");
-		t(12, "len = SIZE_MAX, start end", "hello", 5, SIZE_MAX, "");
-
-	/* Extra: start very big */
-	t(13, "start = UINT_MAX",        "hello", UINT_MAX, 5, "");
-	t(14, "start = UINT_MAX, SIZE_MAX", "hello", UINT_MAX, SIZE_MAX, "");
-
-	/* Extra: should already pass */
-	t(15, "normal case",             "hello world", 6, 5, "world");
-	t(16, "empty string",            "", 0, 5, "");
-	t(17, "len = 0",                 "hello", 2, 0, "");
-
-	return (0);
-}
