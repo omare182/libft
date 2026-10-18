@@ -25,7 +25,8 @@ char *ft_strjoin(char const *s1, char const *s2)
         l1++;
     }
     l2 = 0;
-    while(s2[l2]){
+    while(s2[l2])
+    {
         new[l1 + l2] = s2[l2];
         l2++;
     }
