@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "libft.h"
 size_t len(char const *lenn){
     size_t i;
@@ -43,7 +42,6 @@ int main(){
     size_t i = 0;
     printf("%s \n",n);
        free(n);
-=======
 #include "libft.h"
 size_t len(char const *lenn){
     size_t i;
@@ -88,5 +86,4 @@ int main(){
     size_t i = 0;
     printf("%s \n",n);
        free(n);
->>>>>>> linux
 }

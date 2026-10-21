@@ -57,7 +57,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 
 
-<<<<<<< HEAD
 // #include <stdio.h>
 // #include <stdlib.h>
 // #include <string.h>
@@ -117,9 +116,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 // }
 //////////////////onther test
 /* #include <stdio.h>
-=======
-#include <stdio.h>
->>>>>>> linux
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
@@ -141,10 +137,8 @@ static void	t(int n, char const *s, unsigned int start, size_t len, char const *
 }
 
 int main(void)
-<<<<<<< HEAD
 {/*
 	/* Error 1: s == NULL */
-=======
 {
 	char s1[] = "abc\0def";
 
@@ -180,4 +174,3 @@ int main(void)
 	t(30, NULL, 0, 5, NULL);
 	t(31, NULL, 0, 0, NULL);
 }
->>>>>>> linux
