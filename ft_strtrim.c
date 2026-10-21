@@ -1,27 +1,43 @@
 #include "libft.h"
-size_t len(char const *lenn){
-    size_t i;
+int is_set(char c, char const *set)
+{
+    int i;
 
     i = 0;
-    while(lenn[i])  
+    while(set[i])
+    {
+        if(set[i] == c)
+            return (1);
         i++;
-    return (i);
+    }
+    return (0);
 }
-
 char *ft_strtrim(char const *s1, char const *set)
 {
-    size_t n;
+    size_t end;
     size_t i;
-    size_t j;
+    size_t start;
     char *new;
     
     j = 0;
     i = 0;
     n = 0;
-    new = malloc((len(s1) - len(set)) + 1);
+    new = malloc((ft_strlen(s1) - ft_strlen(set)) + 1);
     if(!new)
         return (NULL);
-    
+    while(s1[i] && is_set(s1[i],set) == 1)
+        i++;
+    start = i;
+    end = ft_strlen(s1);
+    while(end > start && is_set(s1[end],set) == 1)
+        end--;
+    i = 0;
+    while(start < end)
+    {
+        new[i] = s1[start];
+        start++;
+        i++;
+    }
     return (new);
 }
 
