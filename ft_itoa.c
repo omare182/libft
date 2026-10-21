@@ -42,7 +42,7 @@ char *ft_itoa(int n)
         i--;
     }
     return (new);
-}
+} 
 
 
 #include <stdio.h>
