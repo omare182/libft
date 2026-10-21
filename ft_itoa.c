@@ -10,7 +10,7 @@ int count_nb(long n)
         count++;
         n = -n;
     }
-    while (n > 0)
+    while (n >= 0)
     {
         count++;
         n /= 10;
@@ -26,7 +26,7 @@ char *ft_itoa(int n)
 
     nb = n;
     i = count_nb(nb);
-    new = malloc(count_nb(nb) + 1);
+    new = malloc(sizeof(char) * i);
     if(!new)
         return (NULL);
     if(nb < 0)
@@ -35,7 +35,7 @@ char *ft_itoa(int n)
         nb = -nb;
     }
     new[i] = '\0';
-    while(i >= 0 && new[i] != '-')
+    while(i > 0 && new[i] != '-')
     {
         new[i] = (nb % 10) + '0';
         nb /= 10;
@@ -48,7 +48,7 @@ char *ft_itoa(int n)
 #include <stdio.h>
 int main()
 {
-   char *s = ft_itoa(-1337);
+   char *s = ft_itoa(1337);
     printf("%s\n",s);
 
 
