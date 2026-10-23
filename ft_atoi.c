@@ -14,7 +14,8 @@ int ft_atoi(char *str)
         i++;
     if(str[i] == '-' || str[i] == '+')
     {
-        sign *= -1;
+        if(str[i] == '-')
+            sign *= -1;
         i++;
     }
     while(str[i] >= '0' && str[i] <= '9')
@@ -32,7 +33,7 @@ int ft_atoi(char *str)
 
 int main(void)
 {
-    printf("1.  ft: %d | std: %d\n", ft_atoi("1234"), atoi("1234"));
+    printf("1.  ft: %d | std: %d\n", ft_atoi("12341473823232323232323232642374"), atoi("12332482323232323264827644"));
     printf("2.  ft: %d | std: %d\n", ft_atoi("   -42"), atoi("   -42"));
     printf("3.  ft: %d | std: %d\n", ft_atoi("   +567"), atoi("   +567"));
     printf("4.  ft: %d | std: %d\n", ft_atoi("\t\n\r\v\f 99"), atoi("\t\n\r\v\f 99"));
